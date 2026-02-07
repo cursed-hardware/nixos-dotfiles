@@ -1,5 +1,9 @@
-sudo ln -s /home/core/.dotfiles/configuration.nix /etc/nixos/.
+1) ```sudo ln -s /home/core/.dotfiles/configuration.nix /etc/nixos/.```
 
-and
+   For setup NixOS.
 
-stow -R -t -v ~/.config .
+2) ```stow alacritty```
+   ```stow fish```
+   ```stow helix```
+
+   For setup applications.
