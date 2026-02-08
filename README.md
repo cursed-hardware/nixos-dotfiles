@@ -1,15 +1,32 @@
-1) NixOS configuration file
+1) Clone this repo (in home folder)
 ```
-sudo ln -s /home/core/.dotfiles/configuration.nix /etc/nixos/.
+  git clone https://github.com/cursed-hardware/nixos-dotfiles ~/.dotfiles
 ```
 
-2) Install home manager
+2) Symlink NixOS configuration file
+```
+  sudo ln -s /home/core/.dotfiles/configuration.nix /etc/nixos/.
+```
+
+3) Install home manager
 ```
    sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-25.11.tar.gz home-manager
    sudo nix-channel --update
 ```
 
-3) Setup home manager
+
+4) Rebuild system
+```
+  sudo nixos-rebuild switch
+```
+
+5) Symlink home manager config file
+```
+  mkdir ~/.config/home-manager
+  ln -s ~/.dotfiles/home-manager/home.nix ~/.config/home-manager 
+```
+
+6) Setup home manager
 ```
   home-manager switch 
 ```
