@@ -41,10 +41,10 @@
     ".config/alacritty/alacritty.toml".source = ~/.dotfiles/alacritty/alacritty.toml;
 
     # Helix
-    ".config/helix/config.toml".source = ~/.dotfiles/helix/config.toml
+    ".config/helix/config.toml".source = ~/.dotfiles/helix/config.toml;
 
     # Fish
-    ".config/fish/config.fish".source = ~/.dotfiles/fish/config.fish
+    ".config/fish/config.fish".source = ~/.dotfiles/fish/config.fish;
   };
 
   # Home Manager can also manage your environment variables through
