@@ -5,7 +5,7 @@
 
 2) Symlink NixOS configuration file
 ```
-  sudo ln -s /home/core/.dotfiles/configuration.nix /etc/nixos/.
+  sudo ln -s /home/core/.dotfiles/home-manager/configuration.nix /etc/nixos/.
 ```
 
 3) Install home manager
