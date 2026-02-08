@@ -1,9 +1,15 @@
-1) ```sudo ln -s /home/core/.dotfiles/configuration.nix /etc/nixos/.```
+1) NixOS configuration file
+```
+sudo ln -s /home/core/.dotfiles/configuration.nix /etc/nixos/.
+```
 
-   For setup NixOS.
+2) Install home manager
+```
+   sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-25.11.tar.gz home-manager
+   sudo nix-channel --update
+```
 
-2) ```stow alacritty```
-   ```stow fish```
-   ```stow helix```
-
-   For setup applications.
+3) Setup home manager
+```
+  home-manager switch 
+```
