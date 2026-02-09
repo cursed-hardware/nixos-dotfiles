@@ -64,6 +64,7 @@
     telegram-desktop
     firefox
     obsidian
+    nautilus
 
     # Terminal env
     alacritty
