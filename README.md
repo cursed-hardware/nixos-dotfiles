@@ -17,7 +17,7 @@ sudo ln -s /home/core/.dotfiles/nixos/configuration.nix /etc/nixos/.
 
 3) Rebuild system
 ```
-  sudo nixos-rebuild switch
+sudo nixos-rebuild switch
 ```
 
 4) Install home manager
