@@ -7,8 +7,10 @@ git clone https://github.com/cursed-hardware/nixos-dotfiles ~/.dotfiles
 
 Delete (or backup) old config file
 ```
-rm -rf /etc/nixos/
+rm -rf /etc/nixos/configuration.nix
 ```
+
+Symlink new NixOS config
 ```
 sudo ln -s /home/core/.dotfiles/nixos/configuration.nix /etc/nixos/.
 ```
@@ -37,10 +39,10 @@ Remove old home manager config if exist
 rm -rf ~/.config/home-manager/home.nix
 ```
 ```
-  ln -s ~/.dotfiles/home-manager/home.nix ~/.config/home-manager 
+ln -s ~/.dotfiles/home-manager/home.nix ~/.config/home-manager 
 ```
 
 6) Switch to home manager config
 ```
-home-manager switch 
+home-manager switch
 ```
