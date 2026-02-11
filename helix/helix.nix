@@ -1,0 +1,26 @@
+{ pkgs, ... }:
+{
+  programs.helix = {
+    enable = true;
+    settings = {
+      theme = "gruvbox_dark_soft";
+      editor = {
+        line-number = "relative";
+        cursorline = true;
+        true-color = true;
+        color-modes = true;
+        popup-border = "all";
+      };
+      editor.statusline = {
+        mode.normal = "NORMAL";
+        mode.insert = "INSERT";
+        mode.select = "SELECT";
+      };
+      editor.cursor-shape = {
+        normal = "block";
+        insert = "bar";
+        select = "underline";
+      };
+    };
+  };
+}

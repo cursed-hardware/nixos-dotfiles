@@ -8,7 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
-      <home-manager/nixos>
     ];
 
   # Bootloader.
@@ -38,6 +37,8 @@
     variant = "";
   };
 
+  programs.fish.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.core = {
     isNormalUser = true;
@@ -57,8 +58,6 @@
   services.gnome.games.enable = false;
   environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs ];  
 
-  programs.fish.enable = true;
-
   environment.systemPackages = with pkgs; [
     # GUI
     telegram-desktop
@@ -67,9 +66,7 @@
     nautilus
 
     # Terminal env
-    alacritty
     ranger
-    helix
     tmux
 
     # Dev
@@ -83,7 +80,6 @@
     
     # CLI
     fastfetch
-    stow
     yandex-disk
 
     # FOnt
