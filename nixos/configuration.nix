@@ -10,6 +10,8 @@
       /etc/nixos/hardware-configuration.nix
     ];
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  
   # Bootloader.
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "/dev/sda";
@@ -54,7 +56,8 @@
   services.gnome.core-apps.enable = false;
   services.gnome.core-developer-tools.enable = false;
   services.gnome.games.enable = false;
-  environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs ];  
+  environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs ];
+
 
   environment.systemPackages = with pkgs; [
     # GUI
