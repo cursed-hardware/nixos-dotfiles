@@ -5,6 +5,7 @@
     settings = {
       theme = "gruvbox_dark_soft";
       editor = {
+        mouse = true;
         line-number = "relative";
         cursorline = true;
         true-color = true;
@@ -20,6 +21,24 @@
         normal = "block";
         insert = "bar";
         select = "underline";
+      };
+    };
+    languages = {
+      language = [
+        {
+          name = "c";
+          auto-format = true;
+          formatter = {
+            command = "clang-format";
+            args = [ "--style=file" ];
+          };
+          language-servers = [ "clangd" ];
+        }
+      ];
+      language-server = {
+        clangd = {
+          command = "${pkgs.clang-tools}/bin/clangd";
+        };
       };
     };
   };
