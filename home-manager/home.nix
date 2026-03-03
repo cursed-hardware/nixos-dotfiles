@@ -10,25 +10,21 @@
   home.username = "core";
   home.homeDirectory = "/home/core";
 
-
-  home.packages = [
-    pkgs.hello
-  ];
-
-  home.file = {
-    
-  };
+  home.packages = [];
+  home.file = {};
 
   programs.fish = {
     enable = true;
-    shellInit = "set -g fish_greeting";
+    shellInit = ''
+      set -g fish_greeting
+      '';
+    
     shellAliases = {
       nixcfg = "sudo $EDITOR /etc/nixos/configuration.nix";
       nixreb = "sudo nixos-rebuild switch";
       hms = "home-manager switch";
     };
   };
-
   
   home.sessionVariables = {
     EDITOR = "hx";
