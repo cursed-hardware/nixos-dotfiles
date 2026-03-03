@@ -10,8 +10,6 @@
       /etc/nixos/hardware-configuration.nix
     ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
   virtualisation.vmware.guest.enable = true;
     
   # Bootloader.
@@ -85,8 +83,9 @@
     # CLI
     fastfetch
     yandex-disk
+  ];
 
-    # FOnt
+  fonts.fonts = with pkgs; [
     maple-mono.NF
   ];
 
