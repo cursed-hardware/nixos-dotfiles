@@ -5,8 +5,9 @@
     theme = "gruvbox_material_medium_dark";
     settings = {
       window = {
+        decorations = "None";
         startup_mode = "Maximized";
-        padding.x = 5;
+        padding.x = 20;
         padding.y = 5;
         dynamic_padding = true;
       };
@@ -20,6 +21,9 @@
       cursor.style = {
         shape = "Block";
         blinking = "On";
+      };
+      mouse = {
+        hide_when_typing = true;
       };
     };
   };
